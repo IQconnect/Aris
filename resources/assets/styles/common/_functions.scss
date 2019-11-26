@@ -1,0 +1,7 @@
+@function gutter($x) {
+  @return $gutter * $x;
+}
+
+@function color($key) {
+  @return map-get($theme-colors, $key);
+}

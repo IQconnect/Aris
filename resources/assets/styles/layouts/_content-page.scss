@@ -1,0 +1,32 @@
+.page-title {
+  padding: 50px 0 29px;
+  border-top: 5px solid $gray;
+  background: url("../images/subtle_grunge.png");
+}
+
+.content-page {
+  max-width: gutter(110);
+  margin: gutter(8) auto;
+
+  .has-medium-font-size {
+    margin-top: gutter(3);
+    margin-bottom: gutter(2);
+  }
+
+  p {
+    line-height: 28px;
+  }
+
+  ol {
+    margin-top: gutter(3);
+    padding-inline-start: gutter(2);
+  }
+
+  ul,
+  ol {
+    li {
+      padding-top: gutter(0.5);
+      padding-bottom: gutter(0.5);
+    }
+  }
+}

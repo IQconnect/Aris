@@ -1,0 +1,13 @@
+.post-gallery {
+  @extend %clearList;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: gutter(6) gutter(3);
+
+  &__img {
+    @extend %image-fit;
+
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,52 @@
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=latin-ext");
+
+// @import library;
+@import "node_modules/include-media/dist/include-media.scss";
+@import "~flickity/css/flickity.css";
+@import "~animate.css";
+@import "vendors/scss-lock/css-lock";
+
+//common
+@import "common/variables";
+@import "common/mixins";
+@import "common/functions";
+@import "common/helpers";
+@import "common/global";
+@import "common/extends";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+// components
+@import "components/typography";
+@import "components/buttons";
+@import "components/container";
+@import "components/hamburger";
+@import "components/link";
+@import "components/wp-classes";
+@import "components/hr";
+@import "components/submenu";
+@import "components/calendar";
+@import "components/places";
+
+// layouts
+@import "layouts/boxes-img";
+@import "layouts/preloader";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/slider";
+@import "layouts/hero";
+@import "layouts/text-img";
+@import "layouts/section";
+@import "layouts/content-page";
+@import "layouts/gallery";
+@import "layouts/boxes-text";
+@import "layouts/banner";
+@import "layouts/contact";
+@import "layouts/booking";
+@import "layouts/woocommerce";
+
+// blocks
+@import "blocks/post-gallery";

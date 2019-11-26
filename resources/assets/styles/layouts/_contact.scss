@@ -1,0 +1,56 @@
+.contact {
+  font-size: 20px;
+  color: $black;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: gutter(2);
+    flex-direction: column;
+
+    @include media(">=md") {
+      flex-wrap: nowrap;
+      text-align: left;
+      flex-direction: row;
+    }
+  }
+
+  &__icon {
+    color: $white;
+    background-color: $primary;
+    font-size: 45px;
+    width: gutter(8);
+    height: gutter(8);
+    border-radius: 100%;
+    padding: gutter(2.5);
+    margin: 0 0 gutter(1.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--phone i {
+      transform: rotate(100deg);
+    }
+
+    @include media(">=md") {
+      margin: 0 gutter(2) gutter(1.5) 5px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: $bold;
+    text-transform: uppercase;
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

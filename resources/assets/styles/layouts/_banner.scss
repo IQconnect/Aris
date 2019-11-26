@@ -1,0 +1,24 @@
+.banner {
+  position: relative;
+  height: 300px;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    color: rgba($white, $alpha: 0.6);
+    font-size: 30px;
+    line-height: 55px;
+    font-weight: $regular;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include center();
+  }
+}

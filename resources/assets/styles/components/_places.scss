@@ -1,0 +1,26 @@
+.places {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  grid-gap: $gutter * 3;
+
+  @include media("<lg") {
+    grid-template-columns: 1fr;
+  }
+
+  &__elem {
+    display: grid;
+    grid-template-columns: $gutter * 20 1fr;
+    border: 4px solid $primary;
+  }
+
+  &__dsc {
+    padding: $gutter*2;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+}

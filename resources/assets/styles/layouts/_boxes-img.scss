@@ -1,0 +1,20 @@
+.boxes-img {
+  &__box {
+    margin: gutter(2) 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: gutter(35);
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__title {
+    background: $primary;
+    display: block;
+    color: $white;
+    text-align: center;
+    padding: gutter(2);
+  }
+}

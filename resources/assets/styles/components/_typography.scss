@@ -1,0 +1,106 @@
+%text {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.headline {
+  @include cssLock("font-size", 360, 1470, (40, 90));
+
+  font-family: $font-title;
+  color: $white;
+  font-weight: $bold-black;
+
+  @extend %text;
+}
+
+.subheadline {
+  @include cssLock("font-size", 360, 1470, (20, 50));
+
+  font-family: $font-title;
+  color: $white;
+  font-weight: $bold-black;
+
+  @extend %text;
+}
+
+.title {
+  @include cssLock("font-size", 360, 1470, (30, 40));
+
+  font-family: $font-title;
+  font-weight: $bold-black;
+  text-transform: uppercase;
+  display: block;
+
+  @extend %text;
+
+  &--small {
+    @include cssLock("font-size", 360, 1470, (20, 28));
+
+    text-transform: capitalize;
+  }
+
+  &--center {
+    text-align: center;
+
+    &::after {
+      content: "";
+      display: block;
+      background: $primary-light;
+      width: gutter(10);
+      height: gutter(0.5);
+      margin: gutter(2) auto;
+    }
+  }
+}
+
+.subtitle {
+  @include cssLock("font-size", 360, 1470, (14, 16));
+
+  font-family: $font-title;
+  color: $black;
+  font-weight: $regular;
+  text-align: center;
+  margin: auto;
+  max-width: gutter(80);
+
+  @extend %text;
+
+  &--special {
+    @include cssLock("font-size", 360, 1470, (19, 23));
+
+    font-family: $font-title;
+    color: $primary;
+    font-weight: $bold-black;
+  }
+}
+
+.text {
+  @include cssLock("font-size", 360, 1470, (12, 18));
+
+  font-family: $font-main;
+  color: lighten($black, 50);
+  font-weight: $regular;
+
+  @extend %text;
+
+  &--white {
+    color: $white;
+  }
+
+  &--bold {
+    font-weight: $bold;
+  }
+
+  &--primary {
+    color: $primary;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

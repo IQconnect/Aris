@@ -1,0 +1,158 @@
+.header {
+  color: $white;
+  font-size: 1rem;
+  letter-spacing: 0;
+  width: 100%;
+  z-index: 900;
+  transition: $transition;
+  position: fixed;
+  top: 0;
+  background-color: darken($primary, 10);
+  padding: gutter(0.4) 0;
+
+  &__row {
+    justify-content: space-between;
+    padding: gutter(2) 0;
+    align-items: center;
+  }
+
+  &__brand {
+    img {
+      height: gutter(6);
+      width: auto;
+      margin: $gutter;
+    }
+  }
+
+  &__hamburger {
+    z-index: 40;
+    margin-right: gutter(2);
+
+    @include media(">=lg") {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    max-width: 0;
+    height: 100vh;
+    background-color: $primary;
+    border-left: $gutter solid $primary-light;
+    z-index: 10;
+    right: - gutter(2);
+    transition: $transition;
+    overflow: auto;
+
+    @include media(">=sm") {
+      width: 50%;
+    }
+
+    @include media(">=lg") {
+      position: relative;
+      right: 0;
+      height: auto;
+      border: 0;
+      max-width: 100%;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: transparent;
+      padding: 0 15px;
+      overflow: initial;
+    }
+
+    .menu-item {
+      padding: $gutter 0;
+      position: relative;
+
+      @include media(">=lg") {
+        padding: 0 gutter(0.8);
+
+        // &:first-child {
+        //   padding-left: 0;
+        // }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      &:hover {
+        color: $white;
+        text-decoration: underline;
+
+        @include media(">=lg") {
+          .sub-menu {
+            display: block;
+          }
+        }
+      }
+
+      a {
+        padding: $gutter 0;
+        white-space: nowrap;
+        opacity: 0;
+        color: inherit;
+        text-transform: uppercase;
+
+        @include media(">=lg") {
+          padding: gutter(4) gutter(2);
+          opacity: 1;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+
+      &.current-menu-item,
+      &.current-menu-ancestor {
+        position: relative;
+        color: $white;
+
+        @include media(">=lg") {
+          color: $white;
+        }
+
+        .current_page_item {
+          background: $white;
+        }
+      }
+    }
+
+    &.-is-active {
+      max-width: 100vw;
+      right: 0;
+      padding: 0 15px;
+      z-index: 30;
+
+      &::before {
+        opacity: 0.8;
+      }
+
+      a {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: gutter(10) 0 0;
+    margin: 0;
+
+    @include media(">=lg") {
+      padding: 0;
+      flex-direction: row;
+    }
+  }
+}

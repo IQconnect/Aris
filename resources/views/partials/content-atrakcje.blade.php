@@ -1,0 +1,1 @@
+@include('blocks.post', ['post'=>$post])
